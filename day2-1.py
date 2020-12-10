@@ -24,6 +24,24 @@ print(len(list(filter(lambda ps: (lambda x: (lambda m: m[0] <= x and x <= m[1])(
 """
  explanation:
  
+ input
+ open('day2.in','r').read().strip().split('\n')
+  open and read file, removing excess new lines,
+  then splitting by new line
+ 
+ map(lambda x: x.split(':'),...)
+  split each element by the colon. originally this
+  had list(...) wrapping it, but that turned out
+  to be unnecessary.
+ 
+ map((lambda x: [x[0].split(' '),x[1].strip()]),...)
+  this takes each value, then further splits the
+  first section (the "1-3" section) and strips
+  the second section of unnecessary spaces. this
+  is unnecessary, i could have just used x[1][1:]
+  instead. it also puts it into a neat array
+ 
+ processing
  print(len(list(filter(...))))
   this just uses a filter to remove stuff that
   doesnt fall under constraints, sets it to a
@@ -41,20 +59,4 @@ print(len(list(filter(lambda ps: (lambda x: (lambda m: m[0] <= x and x <= m[1])(
  
  m[0] <= x and x <= m[1]
   condition for filter to keep element
- 
- open('day2.in','r').read().strip().split('\n')
-  open and read file, removing excess new lines,
-  then splitting by new line
- 
- map(lambda x: x.split(':'),...)
-  split each element by the colon. originally this
-  had list(...) wrapping it, but that turned out
-  to be unnecessary.
- 
- map((lambda x: [x[0].split(' '),x[1].strip()]),...)
-  this takes each value, then further splits the
-  first section (the "1-3" section) and strips
-  the second section of unnecessary spaces. this
-  is unnecessary, i could have just used x[1][1:]
-  instead. it also puts it into a neat array
 """
