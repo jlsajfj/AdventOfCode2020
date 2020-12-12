@@ -32,4 +32,10 @@ print((lambda t: [len(list(filter(lambda x: x[1][x[0]%len(x[1])]=='#',t))),len(l
 
 """
  this doesnt actually work. I'm leaving it for now, but I'll figure something out another time
+ 
+ ok now is another time and i cant figure it out.
+ here's how it's supposed to work:
+  do the same thing as the first one, but do it 5 different times.
+  python lets you put functions in arrays, but that's actually unnecessary,
+  it's only like that for testing purposes.
 """
