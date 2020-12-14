@@ -1,0 +1,1 @@
+seats = open('day5.in','r').read().split('\n')
